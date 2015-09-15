@@ -13,7 +13,7 @@ USER_CONFIG_LOADED=false
 
 # define usage function
 usage () {
-    echo "Usage: $CMD MESSAGE"
+    echo "Usage: $CMD [MESSAGE]"
 }
 
 # check if any help argument is given then print usage message
