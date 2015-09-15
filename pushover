@@ -17,28 +17,28 @@ usage () {
 }
 
 # check if any help argument is given then print usage message
-if [ "$1" == "-h" ] && [ "$1" == "--help" ]
+if [ "$1" = "-h" ] && [ "$1" = "--help" ]
 then
     usage
     exit
 fi
 
 # check if global configuration file is available and source it
-if [[ -f "$GLOBAL_CONFIG" ]]
+if [ -f "$GLOBAL_CONFIG" ]
 then
     . $GLOBAL_CONFIG
     GLOBAL_CONFIG_LOADED=1
 fi
 
 # check if user configuration file is available and source it
-if [[ -f "$USER_CONFIG" ]]
+if [ -f "$USER_CONFIG" ]
 then
     . $USER_CONFIG
     USER_CONFIG_LOADED=1
 fi
 
 # check if any config is loaded
-if [ "$GLOBAL_CONFIG_LOADED" == false ] && [ "$USER_CONFIG_LOADED" == false ]
+if [ "$GLOBAL_CONFIG_LOADED" = false ] && [ "$USER_CONFIG_LOADED" = false ]
 then
     echo "No configuration file was loaded"
     exit 2
