@@ -24,4 +24,4 @@ pushover [MESSAGE]
 ```
 
 ## License
-Copyright (c) 2015 Florian Goße. Licensed under the MIT license.
+Copyright (c) 2016 Florian Goße. Licensed under the MIT license.
